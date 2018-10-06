@@ -5,5 +5,7 @@
         console.log(e);
     });
 
-
+    function checkboxOtherClicked (){
+        document.getElementById("extra-procedure").style.display = document.querySelector("input[value=other]").checked ? 'block' : 'none'; 
+    }
 }
