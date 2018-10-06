@@ -38,23 +38,100 @@ header {
     font-family: 'Pacifico', cursive;
     font-size: 40px;
     letter-spacing: 5px;
-    /* background-color: #A6D8BE; */
-    text-shadow: 0 0 50px white;
+    text-shadow: 0 0 50px rgba(0,0,0,0.6);
     z-index: 3;
 }
 
-section {
-    border: 3px solid black;
-    background-color: #F5F5F5;
+#clipboard {
+    background-color: burlywood;
+    border: 2px solid rgb(190, 154, 105);
+    box-shadow: 5px 5px 20px 0 rgba(0,0,0,0.4);
     border-radius: 14px;
-    width: 60%;
-    margin: 0 auto;
+    width: 70%;
+    margin: 0 auto 50px auto;
+}
+
+#page {
+    width: 90%;
+    margin: 50px auto;
+    background-color: white;
 }
 
 #description {
-    font-size: 22px;
+    font-size: 26px;
+    margin: 10px;
+}
+
+#survey-form {
+    width: 800px;
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+fieldset {
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 10px 0;
+    max-width: 100%;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 10px;
+}
+
+.input-group-left {
+    width: 50%;
+    text-align: right;
+    padding: 5px 20px;
+    flex-grow: 1;
+}
+
+.input-group-right {
+    width: 50%;
+    flex-grow: 1;
+    text-align: left;
+    padding: 5px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group-right label {
+    margin: 4px 0;
+}
+
+#name, #email, #age {
+    height: 26px;
+    font-size: 14px;
+    padding: 0 6px;
+}
+
+#dropdown {
+    height: 30px;
+    font-size: 14px;
 }
 
 #comment {
     resize: none;
+    width: 100%;
+    height: 60px;
+}
+
+@media screen and (max-width: 800px){
+    .input-group{
+        flex-direction: column;
+    }
+    .input-group-left {
+        width: 90%;
+        margin: 0 auto;
+        text-align: left;
+    }
+    .input-group-right {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
