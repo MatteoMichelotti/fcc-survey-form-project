@@ -19,27 +19,70 @@
             <p id="description">&mdash; Thank you for your visit! Please share your thoughts! &mdash;</p>
             
             <form id="survey-form" action="#">
-                <div class="input-group">
-                    <label id="name-label" for="name">Name<sup>*</sup></label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                </div>
-                <div class="input-group">
-                    <label id="email-label" for="email">Email<sup>*</sup></label>
-                    <input type="email" id="email" name="email" placeholder="Enter a valid email address" required>
-                </div>
-                <div class="input-group">
-                    <label id="number-label" for="age">Age<sup>*</sup></label>
-                    <input type="number" id="age" name="age" min="1" max="150" placeholder="How old are you?" required>
-                </div>
-                <div class="input-group">
-                    <label id="dropdown-label" for="dropdown">Which Doctor visited you?</label>
-                    <select name="dropdown" id="dropdown">
-                        <option value="1">Dr. Green</option>
-                        <option value="2">Dr. White</option>
-                        <option value="3">Dr. Brown</option>
-                        <option value="0">I don't know/don't remember</option>
-                    </select>
-                </div>
+                <fieldset>
+                    <legend>&emsp;&bull; Personal Information &bull;&emsp;</legend>
+                    <div class="input-group">
+                        <label id="name-label" for="name"><sup>*</sup>Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="input-group">
+                        <label id="email-label" for="email"><sup>*</sup>Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter a valid email address" required>
+                    </div>
+                    <div class="input-group">
+                        <label id="number-label" for="age">Age</label>
+                        <input type="number" id="age" name="age" min="1" max="150" placeholder="How old are you?">
+                    </div>
+                    <div class="input-group">
+                        <label id="gender-label" for="gender">Gender</label>
+                        <input type="radio" name="gender" value="M">Male
+                        <input type="radio" name="gender" value="F">Female
+                        <input type="radio" name="gender" value="O">Other
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>&emsp;&bull; About your visit &bull;&emsp;</legend>
+                    <div class="input-group">
+                        <label id="doctors-label" for="dropdown">Which Doctor visited you?</label>
+                        <select name="dropdown" id="dropdown">
+                            <option value="1">Dr. Green</option>
+                            <option value="2">Dr. White</option>
+                            <option value="3">Dr. Brown</option>
+                            <option value="0">I don't know/don't remember</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label id="procedures-label" for="procedures">What procedures did you undergo? Select all that apply</label>
+                        <input type="checkbox" name="procedure" value="checkup">Initial Check-up
+                        <input type="checkbox" name="procedure" value="whitening">Teeth Whitening
+                        <input type="checkbox" name="procedure" value="braces">Braces
+                        <input type="checkbox" name="procedure" value="filling">Filling & Repair
+                        <input type="checkbox" name="procedure" value="extraction">Extraction
+                        <input type="checkbox" name="procedure" value="other">Other
+                    </div>
+                    <div class="input-group">
+                        <label id="doctor-opinion-label" for="doctor-opinion">How would you rate your doctor?</label>
+                        <input type="radio" name="doctor-opinion" value="1">Awful
+                        <input type="radio" name="doctor-opinion" value="2">Bad
+                        <input type="radio" name="doctor-opinion" value="3">Normal
+                        <input type="radio" name="doctor-opinion" value="4">Good
+                        <input type="radio" name="doctor-opinion" value="5">Great
+                    </div>
+                    <div class="input-group">
+                        <label id="general-opinion-label" for="general-opinion">How would you rate your visit overall?</label>
+                        <input type="radio" name="general-opinion" value="1">Awful
+                        <input type="radio" name="general-opinion" value="2">Bad
+                        <input type="radio" name="general-opinion" value="3">Normal
+                        <input type="radio" name="general-opinion" value="4">Good
+                        <input type="radio" name="general-opinion" value="5">Great
+                    </div>
+                    <div class="input-group">
+                        <label id="comment-label" for="comment">Do you have any additional comments or suggestions?</label>
+                        <textarea name="comment" id="comment" cols="30" rows="5" placeholder="Enter your comments/suggersions here..."></textarea>
+                    </div>
+                </fieldset>
+
                 <button type="submit" id="submit">Submit</button>
             </form>
         </section>
