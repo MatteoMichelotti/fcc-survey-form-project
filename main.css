@@ -106,7 +106,7 @@ fieldset {
     margin: 4px 0;
 }
 
-#name, #email, #age, #extra-procedure {
+#name, #email, #number, #extra-procedure {
     height: 26px;
     font-size: 14px;
     padding: 0 6px;
